@@ -31,6 +31,15 @@ namespace Mission06_Pesantez.Controllers
             _context.SaveChanges(); // save changes to the database
             return View("Confirmation"); 
         }
+
+        public IActionResult movieCollection()
+        {
+            var applications = _context.Applications
+            .Where(x => x.Year < 1888)
+            .OrderBy(x => x.Title).ToList(); 
+
+            return View(applications);  
+        }
     }
 
 }

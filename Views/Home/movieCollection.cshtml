@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Application>
+<table class="table table-bordered">
+    <thead class="fw-bold"> 
+        <tr>
+            <td>Category</td>
+            <td>Title</td>
+            <td>Year</td>
+            <td>Director</td>
+            <td>Rating</td>
+            <td>Edited</td>
+            <td>CopiedToPlex</td>
+            <td>Lent To</td>
+            <td>Notes</td>
+        </tr>
+       
+    </thead>
+    @foreach(var app in Model)
+    {
+     <tbody>
+            <tr>
+                <td>@app.Category</td>
+                <td>@app.Title</td>
+                <td>@app.Year</td>
+                <td>@app.Director</td>
+                <td>@app.Rating</td>
+                <td>@app.Edited</td>
+                <td>@app.CopiedToPlex</td>
+                <td>@app.LentTo</td>
+                <td>@app.Notes</td>
+            </tr>
+          
+     </tbody>
+    }
+   
+</table>
