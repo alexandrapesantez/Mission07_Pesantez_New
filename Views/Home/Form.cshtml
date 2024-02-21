@@ -5,7 +5,7 @@
 }
 @* // created a form so that people can submit movies to the Application database and implemented a submission button 
  *@
- @model Application
+ @model Movie
 <h1>Movie </h1>
 <form method="post">
     <label class="form-label" asp-for="Category">Category:</label>
@@ -31,6 +31,12 @@
     <label class="form-label" asp-for="Edited">Edited:</label>
     <select class="form-label" asp-for="Edited" required>
         <option value = "yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <br />
+    <label class="form-label" asp-for="CopiedToPlex">Copied To Plex:</label>
+    <select class="form-label" asp-for="CopiedToPlex">
+        <option value="yes">Yes</option>
         <option value="no">No</option>
     </select>
     <br />

@@ -25,20 +25,18 @@ namespace Mission06_Pesantez.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Form(Application response) 
+        public IActionResult Form(Movie response) 
         {
-            _context.Applications.Add(response);// add record to the databse 
+            _context.Movies.Add(response);// add record to the databse 
             _context.SaveChanges(); // save changes to the database
             return View("Confirmation"); 
         }
 
         public IActionResult movieCollection()
         {
-            var applications = _context.Applications
-            .Where(x => x.Year < 1888)
-            .OrderBy(x => x.Title).ToList(); 
+            var movies = _context.Movies.ToList();
 
-            return View(applications);  
+            return View(movies);  
         }
     }
 

@@ -6,12 +6,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Mission06_Pesantez.Models
 {
     // Define a class called Application
-    public class Application
+    public class Movie
     {
         // Define a property for the primary key of the Application entity
         [Key] // Specifies that this property is the primary key
         [Required] // Specifies that this property is required
-        public int ApplicationID { get; set; }
+        public int MovieID { get; set; }
 
         // Define additional properties for the Application entity
         [ForeignKey("CategoryID")]
